@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon issue that may arise when using the `calc()` function with percentages and multiple units.  It attempts to calculate the width of an element as 50% of its parent container's width minus 10px, but the result may be unexpected:
+
+```css
+div {
+  width: calc(50% - 10px);
+}
+```
+
+The problem is that the `calc()` function's behavior can be inconsistent across different browsers when mixing percentages and fixed units.  Some browsers might interpret this as `(50% - 10px)` while others might incorrectly handle the subtraction of pixels from a percentage.
