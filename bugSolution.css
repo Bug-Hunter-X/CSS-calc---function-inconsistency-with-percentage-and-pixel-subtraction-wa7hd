@@ -1,0 +1,16 @@
+Several strategies can mitigate the inconsistency when using `calc()` with percentages and fixed units:
+
+1. **Avoid mixing units whenever possible:**  If at all feasible, restructure your layout to avoid the need to mix percentages and fixed units within `calc()`. 
+
+2. **Use a JavaScript fallback:**  For maximum compatibility, handle the width calculation dynamically using JavaScript, ensuring consistent behavior regardless of the browser. This provides more control over the calculation process.
+
+3. **Alternative calculation method:** If you absolutely need to use `calc()` and mixing units, consider using viewport units (`vw`) instead of percentages.  Viewport units are relative to the browser window's viewport and offer better consistency across browsers.
+
+```css
+div {
+  /*Solution using vw units*/
+  width: calc(50vw - 10px);
+}
+```
+
+By implementing one of these solutions, you can achieve more reliable and cross-browser compatible results when using the CSS `calc()` function.
